@@ -75,7 +75,7 @@ static int wt1024_callback(r_device *decoder, bitbuffer_t *bitbuffer)
 
     data = data_make(
             "model", "", DATA_STRING, "WT0124-Pool\tWT0124 Pool Thermometer",
-            "rid",    "Random ID", DATA_INT,    sensor_rid,
+            "id",    "Random ID", DATA_INT,    sensor_rid,
             "channel",       "Channel",     DATA_INT,    channel,
             "temperature_C", "Temperature", DATA_FORMAT, "%.1f C", DATA_DOUBLE, temp_c,
             "mic",      "Integrity",      DATA_STRING, "CHECKSUM",
@@ -97,7 +97,7 @@ static int wt1024_callback(r_device *decoder, bitbuffer_t *bitbuffer)
  */
 static char *output_fields[] = {
     "model",
-    "rid",
+    "id",
     "channel",
     "temperature_C",
     "mic",

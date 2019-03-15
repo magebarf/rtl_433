@@ -58,7 +58,7 @@ static int oregon_scientific_v1_callback(r_device *decoder, bitbuffer_t *bitbuff
 		data = data_make(
 				"brand",		"",				DATA_STRING,	"OS",
 				"model",		"",				DATA_STRING,	"Oregon-v1\tOSv1 Temperature Sensor",
-				"sid",			"SID",			DATA_INT,		sid,
+				"id",			"SID",			DATA_INT,		sid,
 				"channel",		"Channel",		DATA_INT,		channel,
 				"battery",		"Battery",		DATA_STRING,	battery ? "LOW" : "OK",
 				"temperature_C","Temperature",	DATA_FORMAT,	"%.01f C",				DATA_DOUBLE,	tempC,

@@ -44,8 +44,8 @@ static int hondaremote_callback(r_device *decoder, bitbuffer_t *bitbuffer)
 
         data = data_make(
                 "model",        "",     DATA_STRING, "Honda-CarRemote\tHonda Remote",
-                "device id",    "",    DATA_INT, device_id,
-                "code",         "",    DATA_STRING, code,
+                "id",           "",     DATA_INT, device_id,
+                "code",         "",     DATA_STRING, code,
                 NULL);
 
         decoder_output_data(decoder, data);
@@ -56,7 +56,7 @@ static int hondaremote_callback(r_device *decoder, bitbuffer_t *bitbuffer)
 
 static char *output_fields[] = {
     "model",
-    "device id",
+    "id",
     "code",
     NULL
 };

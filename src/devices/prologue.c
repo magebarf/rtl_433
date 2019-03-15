@@ -73,8 +73,8 @@ static int prologue_callback(r_device *decoder, bitbuffer_t *bitbuffer)
 
         data = data_make(
                 "model",         "",            DATA_STRING, "Prologue-TH\tPrologue sensor",
-                "id",            "",            DATA_INT, type, // this should be named "type"
-                "rid",           "",            DATA_INT, id, // this should be named "id"
+                "subtype",       "",            DATA_INT, type,
+                "id",            "",            DATA_INT, id,
                 "channel",       "Channel",     DATA_INT, channel,
                 "battery",       "Battery",     DATA_STRING, battery ? "OK" : "LOW",
                 "button",        "Button",      DATA_INT, button,
@@ -90,8 +90,8 @@ static int prologue_callback(r_device *decoder, bitbuffer_t *bitbuffer)
 
 static char *output_fields[] = {
     "model",
+    "subtype",
     "id",
-    "rid",
     "channel",
     "battery",
     "button",
